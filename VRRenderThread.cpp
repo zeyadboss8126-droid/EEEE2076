@@ -28,7 +28,7 @@
 #include <limits>
 
 // ── GrabCallback ──────────────────────────────────────────────────────────────
-//
+
 // HOW THE BINDINGS WORK (from vtk_openvr_actions.json + binding files):
 //   Right grip button → /actions/vtk/in/RightGripAction → Select3DEvent
 //   Left  grip button → /actions/vtk/in/LeftGripAction  → Select3DEvent
