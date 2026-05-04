@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+	<class>OptionDialog</class>
+	<widget class="QDialog" name="OptionDialog">
+		<property name="geometry">
+			<rect>
+				<x>0</x>
+				<y>0</y>
+				<width>420</width>
+				<height>280</height>
+			</rect>
+		</property>
+		<property name="windowTitle">
+			<string>Part Options</string>
+		</property>
+		<layout class="QVBoxLayout" name="verticalLayout">
+
+			<item>
+				<widget class="QLabel" name="labelName">
+					<property name="text">
+						<string>Name</string>
+					</property>
+				</widget>
+			</item>
+
+			<item>
+				<widget class="QLineEdit" name="lineEditName"/>
+			</item>
+
+			<item>
+				<widget class="QCheckBox" name="checkVisible">
+					<property name="text">
+						<string>Visible</string>
+					</property>
+				</widget>
+			</item>
+
+			<item>
+				<widget class="QLabel" name="labelColour">
+					<property name="text">
+						<string>Colour</string>
+					</property>
+				</widget>
+			</item>
+
+			<item>
+				<layout class="QHBoxLayout" name="colourLayout">
+					<item>
+						<widget class="QLabel">
+							<property name="text"><string>R:</string></property>
+						</widget>
+					</item>
+					<item>
+						<widget class="QSpinBox" name="spinR">
+							<property name="maximum"><number>255</number></property>
+						</widget>
+					</item>
+					<item>
+						<widget class="QLabel">
+							<property name="text"><string>G:</string></property>
+						</widget>
+					</item>
+					<item>
+						<widget class="QSpinBox" name="spinG">
+							<property name="maximum"><number>255</number></property>
+						</widget>
+					</item>
+					<item>
+						<widget class="QLabel">
+							<property name="text"><string>B:</string></property>
+						</widget>
+					</item>
+					<item>
+						<widget class="QSpinBox" name="spinB">
+							<property name="maximum"><number>255</number></property>
+						</widget>
+					</item>
+					<item>
+						<widget class="QPushButton" name="btnPickColour">
+							<property name="text"><string>Pick Colour...</string></property>
+						</widget>
+					</item>
+				</layout>
+			</item>
+
+			<item>
+				<widget class="QCheckBox" name="checkShrink">
+					<property name="text">
+						<string>Shrink Filter</string>
+					</property>
+				</widget>
+			</item>
+
+			<item>
+				<widget class="QCheckBox" name="checkClip">
+					<property name="text">
+						<string>Clip Filter</string>
+					</property>
+				</widget>
+			</item>
+
+			<item>
+				<widget class="QDialogButtonBox" name="buttonBox">
+					<property name="orientation">
+						<enum>Qt::Orientation::Horizontal</enum>
+					</property>
+					<property name="standardButtons">
+						<set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+					</property>
+				</widget>
+			</item>
+
+		</layout>
+	</widget>
+
+	<resources/>
+
+	<connections>
+		<connection>
+			<sender>buttonBox</sender>
+			<signal>accepted()</signal>
+			<receiver>OptionDialog</receiver>
+			<slot>accept()</slot>
+		</connection>
+		<connection>
+			<sender>buttonBox</sender>
+			<signal>rejected()</signal>
+			<receiver>OptionDialog</receiver>
+			<slot>reject()</slot>
+		</connection>
+	</connections>
+</ui>
